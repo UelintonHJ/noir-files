@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { casesRoutes } from "./case.rotes.js";
+import { casesRoutes } from "./case.routes.js";
 
 const router = Router();
 
