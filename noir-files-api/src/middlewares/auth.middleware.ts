@@ -24,10 +24,17 @@ export function authMiddleware(
     }
 
     try {
-        const decoded = jwt.verify(token, JWT_SECRET);
-        (req as any).user = decoded;
+        const decoded = jwt.verify(token, JWT_SECRET) as {
+            sub: string;
+            role: string;
+        };
+        
+        req.userId = decoded.sub;
+        req.userRole = decoded.role;
+        
         next();
-    } catch {
+    } catch (error) {
+        console.error(error);
         return res.status(401).json({ message: "Invalid token"});
     }
 }

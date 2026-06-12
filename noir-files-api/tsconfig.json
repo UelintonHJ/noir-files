@@ -42,7 +42,9 @@
   },
 
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.d.ts"
   ],
 
   "exclude": [
