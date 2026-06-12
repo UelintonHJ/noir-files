@@ -3,6 +3,7 @@ import cors from "cors";
 
 import { router } from "./routes/index.js";
 import { errorHandler } from "./middlewares/error.middleware.js";
+import { authRouter } from "./routes/auth.routes.js";
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get("/health", (_, response) => {
     });
 });
 
+app.use(authRouter);
 app.use(router);
 app.use(errorHandler);
 
