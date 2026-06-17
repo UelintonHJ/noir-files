@@ -1,8 +1,15 @@
+import { ThemeProvider } from './contexts/ThemeContext';
 import { AppRoutes } from './routes';
-import './App.css'
+
+import "./styles/themes.css";
+import "./styles/global.css";
 
 function App() {
-  return <AppRoutes />
+  return (
+    <ThemeProvider>
+      <AppRoutes />
+    </ThemeProvider>
+  );
 }
 
 export default App;
