@@ -8,6 +8,7 @@ export function ThemeSwitcher() {
 
     return (
         <button
+            type="button"
             onClick={() => 
                 setTheme(
                     theme === "noir"
@@ -15,6 +16,11 @@ export function ThemeSwitcher() {
                         : "noir"
                 )
             }
+            aria-label={`Alternar para tema ${
+                theme === "noir"
+                    ? "pulp"
+                    : "noir"
+            }`}
         >
             Tema atual: {theme}
         </button>
