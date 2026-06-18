@@ -1,9 +1,15 @@
 import "./Hero.css";
+import heroBackground from "../../assets/hero-background.webp";
 
 export function Hero() {
     return (
         <section className="hero">
-            <div className="hero__background" />
+            <div
+                className="hero__background"
+                style={{
+                    ["--hero-background" as string]: `url(${heroBackground})`,
+                }}
+            />
 
             <div className="hero__overlay" />
 
