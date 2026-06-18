@@ -1,5 +1,6 @@
 import "./Hero.css";
 import heroBackground from "../../assets/hero-background.webp";
+import { RainCanvas } from "../RainCanvas/RainCanvas"
 
 export function Hero() {
     return (
@@ -32,7 +33,9 @@ export function Hero() {
                 </button>
             </div>
 
-            <div className="hero__effects" />
+            <div className="hero__effects"> 
+                <RainCanvas />
+            </div>
         </section>
     )
 }
