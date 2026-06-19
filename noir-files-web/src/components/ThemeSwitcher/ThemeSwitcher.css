@@ -1,0 +1,33 @@
+.themeSwitcher {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    display: flex;
+    gap: 1rem;
+    font-family: monospace;
+    letter-spacing: 0.15em;
+}
+
+.themeSwitcher button {
+    all: unset;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.15rem;
+    opacity: 0.4;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.themeSwitcher button.active {
+    opacity: 1;
+    filter: brightness(1.2);
+}
+
+.themeSwitcher button:nth-child(1) {
+    color: #c2a878;
+}
+
+.themeSwitcher button:nth-child(2) {
+    color: #d62828;
+}

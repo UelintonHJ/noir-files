@@ -1,4 +1,5 @@
 import { useTheme } from "../../contexts/ThemeContext";
+import "./ThemeSwitcher.css";
 
 export function ThemeSwitcher() {
     const {
@@ -7,22 +8,20 @@ export function ThemeSwitcher() {
     } = useTheme();
 
     return (
-        <button
-            type="button"
-            onClick={() => 
-                setTheme(
-                    theme === "noir"
-                        ? "pulp"
-                        : "noir"
-                )
-            }
-            aria-label={`Alternar para tema ${
-                theme === "noir"
-                    ? "pulp"
-                    : "noir"
-            }`}
-        >
-            Tema atual: {theme}
-        </button>
+        <div className="themeSwitcher">
+            <button
+                className={theme === "noir" ? "active" : ""}
+                onClick={() => setTheme("noir")}
+            >
+                {theme === "noir" ? "[ NOIR ]" : "NOIR"}
+            </button>
+
+            <button
+                className={theme === "pulp" ? "active" : ""}
+                onClick={() => setTheme("pulp")}
+            >
+                {theme === "pulp" ? "[ PULP ]" : "PULP"}
+            </button>
+        </div>
     );
 }
