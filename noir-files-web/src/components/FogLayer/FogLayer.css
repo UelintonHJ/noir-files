@@ -8,6 +8,7 @@
     border-radius: 50%;
     will-change: transform, opacity;
     transform: translateZ(0);
+    z-index: 4;
 }
 
 .fog--back {

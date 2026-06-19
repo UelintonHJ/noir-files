@@ -1,0 +1,10 @@
+import "./Vignette.css";
+
+export function Vignette() {
+    return (
+        <div 
+            className="vignette"
+            aria-hidden="true"
+        />
+    );
+}
