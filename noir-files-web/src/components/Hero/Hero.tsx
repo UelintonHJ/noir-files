@@ -4,8 +4,11 @@ import { RainCanvas } from "../RainCanvas/RainCanvas"
 import { FogLayer } from "../FogLayer/FogLayer";
 import { FilmGrain } from "../FilmGrain/FilmGrain";
 import { Vignette } from "../Vignette/Vignette";
+import { useHeroIntroAnimation } from "./useHeroIntroAnimation";
 
 export function Hero() {
+    useHeroIntroAnimation();
+
     return (
         <section className="hero">
             <div
